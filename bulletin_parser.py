@@ -151,19 +151,30 @@ def _wait_for_page_load(driver, timeout: int = WAIT_TIMEOUT):
 # CVE 詳細資訊解析
 # ──────────────────────────────────────────────────────────────
 
+# 匹配 CVSS Base score 行（允許行尾有分數、或僅含標籤）
+# 格式一（分行）：  "CVSS Base score:"
+# 格式二（同行）：  "CVSS Base score: 7.1"
+RE_CVSS_LABEL = re.compile(
+    r"CVSS\s+Base\s+score\s*:?\s*([0-9]+(?:\.[0-9]+)?)?$",
+    re.IGNORECASE
+)
+# 從行首抓 CVSS 數字（允許後綴，如 "7.1 (HIGH)"）
+RE_CVSS_NUMBER = re.compile(r"^([0-9]+(?:\.[0-9]+)?)")
+
+
 def _parse_cve_details(lines: List[str], vd_start: int, vd_end: int) -> List[CveDetail]:
     """
     從 Vulnerability Details 區段解析每個 CVE 的 ID 與 CVSS Base Score。
 
-    頁面文字結構（每個 CVE 區塊）：
-      CVEID:
-      CVE-XXXX-YYYY
-      DESCRIPTION:
-      ...
-      CVSS Base score:
-      9.3              ← 緊接在 "CVSS Base score:" 下一個非空行就是分數
-      CVSS Vector:
-      ...
+    支援兩種格式：
+      格式一（分行）：
+        CVSS Base score:
+        9.3              ← 下一個非空行是分數
+      格式二（同行）：
+        CVSS Base score: 9.3   ← 標籤與分數同行
+      格式三（帶後綴）：
+        CVSS Base score:
+        7.1 (HIGH)       ← 分數後有非數字後綴
     """
     details: List[CveDetail] = []
     vd_lines = lines[vd_start:vd_end]
@@ -176,24 +187,48 @@ def _parse_cve_details(lines: List[str], vd_start: int, vd_end: int) -> List[Cve
         if not stripped:
             continue
 
-        # 偵測 CVE ID 行
+        # 偵測 CVE ID 行（fullmatch 僅處理純 CVE ID；若同行有前綴則用 search 兜底）
         cve_match = RE_CVE.fullmatch(stripped.upper())
+        if not cve_match:
+            # 兜底：行中可能含有 "CVEID: CVE-2026-XXXX" 等格式
+            m_search = RE_CVE.search(stripped.upper())
+            if m_search and re.match(r"CVEID\s*:?\s*CVE-", stripped, re.IGNORECASE):
+                cve_match = m_search
         if cve_match:
+            cve_id = RE_CVE.search(stripped.upper()).group(0)
             if current_cve and not any(d.cve_id == current_cve for d in details):
                 details.append(CveDetail(cve_id=current_cve, cvss_score=0.0))
-            current_cve = stripped.upper()
+            current_cve = cve_id
             expect_score = False
             continue
 
-        # 偵測 "CVSS Base score:" 標記
-        if re.match(r"CVSS\s+Base\s+score\s*:?$", stripped, re.IGNORECASE):
-            expect_score = True
+        # 偵測 "CVSS Base score:" 標記（同時處理 inline 分數）
+        m_label = RE_CVSS_LABEL.match(stripped)
+        if m_label:
+            inline_score_str = m_label.group(1)
+            if inline_score_str and current_cve:
+                # 格式二：標籤與分數同行，直接記錄
+                score = float(inline_score_str)
+                severity = _severity_from_score(score)
+                details.append(CveDetail(
+                    cve_id=current_cve,
+                    cvss_score=score,
+                    severity=severity,
+                ))
+                logger.debug("  CVE %s → CVSS %.1f (%s) [inline]", current_cve, score, severity)
+                current_cve = ""
+                expect_score = False
+            else:
+                # 格式一：分數在下一行
+                expect_score = True
             continue
 
-        # 讀取 CVSS 分數
+        # 讀取 CVSS 分數（expect_score=True 時的下一個非空行）
         if expect_score and current_cve:
-            try:
-                score = float(stripped)
+            # 從行首抓數字（允許後綴如 " (HIGH)"）
+            m_num = RE_CVSS_NUMBER.match(stripped)
+            if m_num:
+                score = float(m_num.group(1))
                 severity = _severity_from_score(score)
                 details.append(CveDetail(
                     cve_id=current_cve,
@@ -203,8 +238,9 @@ def _parse_cve_details(lines: List[str], vd_start: int, vd_end: int) -> List[Cve
                 logger.debug("  CVE %s → CVSS %.1f (%s)", current_cve, score, severity)
                 current_cve = ""
                 expect_score = False
-            except ValueError:
-                pass
+            else:
+                # 非數字行：重置 expect_score，避免後續行被誤判
+                expect_score = False
             continue
 
     if current_cve and not any(d.cve_id == current_cve for d in details):
@@ -223,7 +259,7 @@ def _fallback_parse_cve_details(text: str, cve_ids: List[str]) -> List[CveDetail
         if idx != -1:
             window = text[idx:idx + 1200]
             m = re.search(
-                r"CVSS\s*Base\s*score\s*:?[\s\n]*([0-9]+(?:\.[0-9])?)",
+                r"CVSS\s*Base\s*score\s*:?[\s\n]*([0-9]+(?:\.[0-9]+)?)",
                 window, re.IGNORECASE
             )
             if m:
@@ -930,13 +966,20 @@ def expand_bulletin_to_rows(bulletin: SecurityBulletin, min_cvss: float = 7.0) -
     """
     將一個 SecurityBulletin（含多個 CVE）展開為多筆輸出列。
     每筆各對應一個 CVE，共用 Bulletin、iFix、Fixpack 等欄位。
-    只保留 CVSS >= min_cvss 的 CVE（CVSS=0 且 list severity=High/Critical 的也保留）。
+    只保留 CVSS >= min_cvss 的 CVE。
+
+    Fallback 規則：只有當所有 CVE 分數均為 0（真的解析不到）且 severity 是
+    High/Critical 時，才補一筆 score=0 的佔位列，以免整篇 Bulletin 消失。
+    若分數已知但低於 min_cvss 門檻，則正常過濾，不補佔位列。
     """
     rows = []
+    # 判斷是否至少有一個 CVE 的分數已成功解析（> 0）
+    any_score_known = any(d.cvss_score > 0.0 for d in bulletin.cve_details)
 
     for detail in bulletin.cve_details:
         if detail.cvss_score >= min_cvss or (
             detail.cvss_score == 0.0
+            and not any_score_known
             and bulletin._list_severity.lower() in {"high", "critical"}
         ):
             if detail.cvss_score > 0:
@@ -963,7 +1006,8 @@ def expand_bulletin_to_rows(bulletin: SecurityBulletin, min_cvss: float = 7.0) -
             )
             rows.append(row)
 
-    if not rows and bulletin._list_severity.lower() in {"high", "critical"}:
+    # Fallback：分數完全未知（所有 CVE score=0）且無任何列通過門檻時，補一筆佔位列
+    if not rows and not any_score_known and bulletin._list_severity.lower() in {"high", "critical"}:
         rows.append(SecurityBulletin(
             title=bulletin.title,
             bulletin_url=bulletin.bulletin_url,
