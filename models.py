@@ -50,6 +50,9 @@ class SecurityBulletin:
     fixpack_date_lts: str = ""  # 例如 "3Q2026"
     fixpack_date_cd: str = ""
 
+    # 欄位 10：Affected Components（來自內頁 "The following installable MQ components are affected..."）
+    affected_components: str = ""  # 例如 "Standard Client" 或 "Server, Standard Client"
+
     # 內部欄位：來自清單頁的原始 severity（作為 fallback）
     _list_severity: str = ""
 

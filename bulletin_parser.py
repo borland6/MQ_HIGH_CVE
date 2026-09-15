@@ -474,6 +474,51 @@ def _fallback_find_affected_versions(text: str) -> str:
 
 
 # ──────────────────────────────────────────────────────────────
+# Affected Components 解析
+# ──────────────────────────────────────────────────────────────
+
+_AC_MARKER = "The following installable MQ components are affected by the vulnerability:"
+
+
+def _parse_affected_components(lines: List[str]) -> str:
+    """
+    從頁面文字行中找到 "The following installable MQ components are affected..."
+    這行之後，擷取以 "-" 開頭的條目作為 affected components。
+    遇到空行或非 "-" 開頭的非空行即停止。
+    回傳逗號分隔的字串；若找不到則回傳空字串。
+    """
+    marker_idx = -1
+    for i, line in enumerate(lines):
+        if _AC_MARKER in line:
+            marker_idx = i
+            break
+
+    if marker_idx == -1:
+        return ""
+
+    components = []
+    for line in lines[marker_idx + 1:]:
+        stripped = line.strip()
+        if not stripped:
+            # 跳過空行，繼續往下找（marker 後面可能有空行）
+            if components:
+                # 已經收集到至少一項，空行代表區塊結束
+                break
+            continue
+        if stripped.startswith("-"):
+            # 去掉開頭的 "- " 並清理空白
+            component = stripped.lstrip("-").strip()
+            if component:
+                components.append(component)
+        else:
+            # 非 "-" 開頭的非空行，區塊結束
+            if components:
+                break
+
+    return ", ".join(components)
+
+
+# ──────────────────────────────────────────────────────────────
 # iFix URL 查找
 # ──────────────────────────────────────────────────────────────
 
@@ -912,6 +957,11 @@ def parse_bulletin_detail(driver, bulletin_dict: Dict) -> SecurityBulletin:
             bulletin.affected_versions = _fallback_find_affected_versions(text)
         logger.info("  Affected Versions: %s", bulletin.affected_versions.replace('\n', ' | '))
 
+        # 3a. 解析 Affected Components（"The following installable MQ components are affected..."）
+        bulletin.affected_components = _parse_affected_components(lines)
+        if bulletin.affected_components:
+            logger.info("  Affected Components: %s", bulletin.affected_components)
+
         # 4. 解析 Remediation（多版本線 iFix + Fixpack）
         if rem_start != -1:
             fix_info = _parse_remediation(lines, rem_start)
@@ -1003,6 +1053,7 @@ def expand_bulletin_to_rows(bulletin: SecurityBulletin, min_cvss: float = 7.0) -
                 fixpack_date_lts=bulletin.fixpack_date_lts,
                 fixpack_cd=bulletin.fixpack_cd,
                 fixpack_date_cd=bulletin.fixpack_date_cd,
+                affected_components=bulletin.affected_components,
             )
             rows.append(row)
 
@@ -1024,6 +1075,7 @@ def expand_bulletin_to_rows(bulletin: SecurityBulletin, min_cvss: float = 7.0) -
             fixpack_date_lts=bulletin.fixpack_date_lts,
             fixpack_cd=bulletin.fixpack_cd,
             fixpack_date_cd=bulletin.fixpack_date_cd,
+            affected_components=bulletin.affected_components,
         ))
 
     return rows

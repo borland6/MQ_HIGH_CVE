@@ -179,6 +179,7 @@ def _build_table_rows(bulletins: List[SecurityBulletin]) -> str:
         sev = b.severity.lower()
         row_class = "table-danger-light" if sev == "critical" else ("table-warning-light" if sev == "high" else "")
 
+        ac = b.affected_components or "—"
         row = f"""        <tr class="{row_class}">
           <td class="bulletin-col">{_bulletin_link(b.title, b.bulletin_url)}</td>
           <td class="ver-col">{b.affected_versions.replace(chr(10), "<br>") if b.affected_versions else "—"}</td>
@@ -186,9 +187,9 @@ def _build_table_rows(bulletins: List[SecurityBulletin]) -> str:
           <td class="text-center">{_severity_badge(b.severity)}</td>
           <td class="text-nowrap">{b.publish_date or "—"}</td>
           <td class="text-center">{_cvss_badge(b.cvss_score)}</td>
-          <td class="fix-col">{_ifix_cell(b.ifix_lts, b.ifix_lts_url, b.ifix_cd, b.ifix_cd_url)}</td>
           <td class="fix-col">{_fixpack_cell(b.fixpack_lts, b.fixpack_cd)}</td>
           <td class="text-center">{_fixdate_cell(b.fixpack_date_lts, b.fixpack_date_cd)}</td>
+          <td class="ac-col">{ac}</td>
         </tr>"""
         rows.append(row)
     return "\n".join(rows)
@@ -426,6 +427,7 @@ def generate_html(
     .ver-col {{ min-width: 160px; max-width: 260px; font-size: 0.8rem; }}
     .cve-col {{ min-width: 130px; }}
     .fix-col {{ min-width: 120px; }}
+    .ac-col {{ min-width: 140px; max-width: 240px; font-size: 0.8rem; }}
 
     /* ── Footer ── */
     .report-footer {{
@@ -507,9 +509,9 @@ def generate_html(
             <th class="text-center">Severity</th>
             <th class="text-center">Publish Date</th>
             <th class="text-center">CVSS Base Score</th>
-            <th class="text-center">iFix</th>
             <th class="text-center">Fixpack Version</th>
             <th class="text-center">Fixpack Release Date</th>
+            <th class="text-center">AC</th>
           </tr>
         </thead>
         <tbody>
@@ -556,7 +558,7 @@ def generate_html(
       }},
       columnDefs: [
         {{ orderable: false, targets: [0, 2, 6, 7, 8] }},  // 不可排序的欄位
-        {{ className: 'text-center', targets: [1, 2, 3, 4, 5, 6, 7, 8] }}
+        {{ className: 'text-center', targets: [1, 2, 3, 4, 5, 6, 7] }}
       ],
       responsive: true
     }});
