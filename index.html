@@ -199,6 +199,7 @@
     .ver-col { min-width: 160px; max-width: 260px; font-size: 0.8rem; }
     .cve-col { min-width: 130px; }
     .fix-col { min-width: 120px; }
+    .ac-col { min-width: 140px; max-width: 240px; font-size: 0.8rem; }
 
     /* ── Footer ── */
     .report-footer {
@@ -228,7 +229,7 @@
       資料來源：IBM Security Bulletins &nbsp;|&nbsp;
       查詢範圍：最近 <strong>90</strong> 天 &nbsp;|&nbsp;
       CVSS 門檻：<strong>≥ 7.5</strong> &nbsp;|&nbsp;
-      報表生成時間：<strong>2026-09-15 00:49:09</strong>
+      報表生成時間：<strong>2026-09-15 16:30:32</strong>
     </div>
   </div>
 
@@ -280,9 +281,9 @@
             <th class="text-center">Severity</th>
             <th class="text-center">Publish Date</th>
             <th class="text-center">CVSS Base Score</th>
-            <th class="text-center">iFix</th>
             <th class="text-center">Fixpack Version</th>
             <th class="text-center">Fixpack Release Date</th>
+            <th class="text-center">AC</th>
           </tr>
         </thead>
         <tbody>
@@ -293,9 +294,9 @@
           <td class="text-center"><span class="badge rounded-pill bg-danger px-3 py-2 fs-badge">Critical</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-critical">10.0</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Server</td>
         </tr>
         <tr class="table-danger-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284545" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is vulnerable to remote code execution (CVE-2026-11381)</a></td>
@@ -304,9 +305,9 @@
           <td class="text-center"><span class="badge rounded-pill bg-danger px-3 py-2 fs-badge">Critical</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-critical">9.9</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Server</td>
         </tr>
         <tr class="table-danger-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284544" target="_blank" rel="noopener" class="bulletin-link">IBM MQ queue manager is vulnerable to remote code execution (CVE-2026-10858)</a></td>
@@ -315,9 +316,9 @@
           <td class="text-center"><span class="badge rounded-pill bg-danger px-3 py-2 fs-badge">Critical</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-critical">9.9</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Server</td>
         </tr>
         <tr class="table-danger-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284541" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is vulnerable to unauthenticated remote code execution via JNDI injection (CVE-2026-12351)</a></td>
@@ -326,9 +327,9 @@
           <td class="text-center"><span class="badge rounded-pill bg-danger px-3 py-2 fs-badge">Critical</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-critical">9.8</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Java messaging</td>
         </tr>
         <tr class="table-danger-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284538" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple CVEs</a></td>
@@ -337,9 +338,9 @@
           <td class="text-center"><span class="badge rounded-pill bg-danger px-3 py-2 fs-badge">Critical</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-critical">9.1</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Advanced Message Security (AMS)</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284538" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple CVEs</a></td>
@@ -348,9 +349,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.8</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Advanced Message Security (AMS)</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284896" target="_blank" rel="noopener" class="bulletin-link">IBM MQ Java messaging is vulnerable to remote code execution (CVE-2026-13293)</a></td>
@@ -359,9 +360,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.8</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Java messaging</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284942" target="_blank" rel="noopener" class="bulletin-link">IBM MQ Java messaging is vulnerable to remote code execution (CVE-2026-12728)</a></td>
@@ -370,9 +371,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.8</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Java messaging</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284944" target="_blank" rel="noopener" class="bulletin-link">IBM MQ queue manager is vulnerable to privilege escalation (CVE-2026-11725)</a></td>
@@ -381,9 +382,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.8</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Server</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284945" target="_blank" rel="noopener" class="bulletin-link">IBM MQ queue manager is vulnerable to remote code execution (CVE-2026-11378)</a></td>
@@ -392,9 +393,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.8</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Server</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284948" target="_blank" rel="noopener" class="bulletin-link">IBM MQ queue manager is vulnerable to remote code execution (CVE-2026-11375)</a></td>
@@ -403,9 +404,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.8</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Server</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284724" target="_blank" rel="noopener" class="bulletin-link">IBM MQ REST API and Console is vulnerable to multiple security issues</a></td>
@@ -414,9 +415,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.7</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">—</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284724" target="_blank" rel="noopener" class="bulletin-link">IBM MQ REST API and Console is vulnerable to multiple security issues</a></td>
@@ -425,9 +426,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.6</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">—</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284941" target="_blank" rel="noopener" class="bulletin-link">IBM MQ Java messaging is vulnerable to remote code execution (CVE-2026-11729)</a></td>
@@ -436,9 +437,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Java messaging</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284892" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by a vulnerability in IBM WebSphere Application Server Liberty (CVE-2026-11714)</a></td>
@@ -447,9 +448,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">REST API and Console</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284724" target="_blank" rel="noopener" class="bulletin-link">IBM MQ REST API and Console is vulnerable to multiple security issues</a></td>
@@ -458,9 +459,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.2</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">—</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284538" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple CVEs</a></td>
@@ -469,9 +470,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.1</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Advanced Message Security (AMS)</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284939" target="_blank" rel="noopener" class="bulletin-link">IBM MQ Java messaging is vulnerable to XML external entity injection (CVE-2026-12666)</a></td>
@@ -480,9 +481,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.1</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Java messaging</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284912" target="_blank" rel="noopener" class="bulletin-link">IBM MQ Resource Adapter IVT servlet is vulnerable to unauthenticated remote code execution (CVE-2026-12355)</a></td>
@@ -491,9 +492,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.1</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Java messaging</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284943" target="_blank" rel="noopener" class="bulletin-link">IBM MQ .NET client is vulnerable to remote code execution (CVE-2026-11728)</a></td>
@@ -502,9 +503,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.1</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">.NET messaging</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284933" target="_blank" rel="noopener" class="bulletin-link">IBM MQ client is vulnerable to remote code execution (CVE-2026-11727)</a></td>
@@ -513,9 +514,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.1</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Standard Client</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284946" target="_blank" rel="noopener" class="bulletin-link">IBM MQ queue manager is vulnerable to information disclosure and denial of service (CVE-2026-11726)</a></td>
@@ -524,9 +525,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.1</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Server</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284893" target="_blank" rel="noopener" class="bulletin-link">IBM MQ queue manager is vulnerable to unauthenticated remote code execution (CVE-2026-10027)</a></td>
@@ -535,9 +536,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">8.1</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Server</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284724" target="_blank" rel="noopener" class="bulletin-link">IBM MQ REST API and Console is vulnerable to multiple security issues</a></td>
@@ -546,9 +547,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.7</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">—</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284889" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple vulnerabilities in IBM WebSphere Application Server Liberty (CVE-2026-50645,CVE-2026-9322,CVE-2026-9171)</a></td>
@@ -557,9 +558,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">REST API and Console</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284889" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple vulnerabilities in IBM WebSphere Application Server Liberty (CVE-2026-50645,CVE-2026-9322,CVE-2026-9171)</a></td>
@@ -568,9 +569,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">REST API and Console</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284889" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple vulnerabilities in IBM WebSphere Application Server Liberty (CVE-2026-50645,CVE-2026-9322,CVE-2026-9171)</a></td>
@@ -579,9 +580,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">REST API and Console</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284538" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple CVEs</a></td>
@@ -590,9 +591,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Advanced Message Security (AMS)</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284538" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple CVEs</a></td>
@@ -601,9 +602,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Advanced Message Security (AMS)</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284538" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple CVEs</a></td>
@@ -612,9 +613,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Advanced Message Security (AMS)</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284538" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple CVEs</a></td>
@@ -623,9 +624,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Advanced Message Security (AMS)</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284538" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple CVEs</a></td>
@@ -634,9 +635,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Advanced Message Security (AMS)</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284888" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by a vulnerability in IBM WebSphere Application Server Liberty (CVE-2026-9071)</a></td>
@@ -645,9 +646,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">REST API and Console</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284724" target="_blank" rel="noopener" class="bulletin-link">IBM MQ REST API and Console is vulnerable to multiple security issues</a></td>
@@ -656,9 +657,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">—</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284724" target="_blank" rel="noopener" class="bulletin-link">IBM MQ REST API and Console is vulnerable to multiple security issues</a></td>
@@ -667,9 +668,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">—</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284724" target="_blank" rel="noopener" class="bulletin-link">IBM MQ REST API and Console is vulnerable to multiple security issues</a></td>
@@ -678,9 +679,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">—</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284724" target="_blank" rel="noopener" class="bulletin-link">IBM MQ REST API and Console is vulnerable to multiple security issues</a></td>
@@ -689,9 +690,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">—</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284908" target="_blank" rel="noopener" class="bulletin-link">IBM MQ Resource Adapter IVT message-driven bean is vulnerable to remote code execution via JNDI injection (CVE-2026-12354)</a></td>
@@ -700,9 +701,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Java messaging</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284913" target="_blank" rel="noopener" class="bulletin-link">IBM MQ queue manager is vulnerable to remote code execution (CVE-2026-11716)</a></td>
@@ -711,9 +712,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Server</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284905" target="_blank" rel="noopener" class="bulletin-link">IBM MQ queue manager is vulnerable to remote code execution (CVE-2026-10853)</a></td>
@@ -722,9 +723,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Server</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284898" target="_blank" rel="noopener" class="bulletin-link">IBM MQ Java messaging is vulnerable to remote code execution (CVE-2026-10751)</a></td>
@@ -733,9 +734,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Java messaging</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7284899" target="_blank" rel="noopener" class="bulletin-link">IBM MQ queue manager is vulnerable to privilege escalation (CVE-2026-10744)</a></td>
@@ -744,9 +745,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-09-14</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.38</span><br><span class="version-tag lts-tag">LTS: 9.2.0.44</span><br><span class="version-tag lts-tag">LTS: 9.3.0.42</span><br><span class="version-tag lts-tag">LTS: 9.4.0.26</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span><br><span class="date-tag lts-date-tag">LTS: 2026/09/10</span></td>
+          <td class="ac-col">Server</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7277749" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple vulnerabilities in the IBM Semeru Runtime Environment (CVE-2026-34282,CVE-2026-22016,CVE-2026-23865,CVE-2026-22021,CVE-2026-22013,CVE-2026-22018,CVE-2026-22008,CVE-2026-34268,CVE-2026-22007,CVE-2026-6918)</a></td>
@@ -755,9 +756,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-06-26</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.37</span><br><span class="version-tag lts-tag">LTS: 9.2.0.43</span><br><span class="version-tag lts-tag">LTS: 9.3.0.41</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/06/24</span><br><span class="date-tag lts-date-tag">LTS: 2026/06/24</span><br><span class="date-tag lts-date-tag">LTS: 2026/06/24</span></td>
+          <td class="ac-col">—</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7277749" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple vulnerabilities in the IBM Semeru Runtime Environment (CVE-2026-34282,CVE-2026-22016,CVE-2026-23865,CVE-2026-22021,CVE-2026-22013,CVE-2026-22018,CVE-2026-22008,CVE-2026-34268,CVE-2026-22007,CVE-2026-6918)</a></td>
@@ -766,9 +767,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-06-26</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.37</span><br><span class="version-tag lts-tag">LTS: 9.2.0.43</span><br><span class="version-tag lts-tag">LTS: 9.3.0.41</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/06/24</span><br><span class="date-tag lts-date-tag">LTS: 2026/06/24</span><br><span class="date-tag lts-date-tag">LTS: 2026/06/24</span></td>
+          <td class="ac-col">—</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7277749" target="_blank" rel="noopener" class="bulletin-link">IBM MQ is affected by multiple vulnerabilities in the IBM Semeru Runtime Environment (CVE-2026-34282,CVE-2026-22016,CVE-2026-23865,CVE-2026-22021,CVE-2026-22013,CVE-2026-22018,CVE-2026-22008,CVE-2026-34268,CVE-2026-22007,CVE-2026-6918)</a></td>
@@ -777,9 +778,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-06-26</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.1.0.37</span><br><span class="version-tag lts-tag">LTS: 9.2.0.43</span><br><span class="version-tag lts-tag">LTS: 9.3.0.41</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/06/24</span><br><span class="date-tag lts-date-tag">LTS: 2026/06/24</span><br><span class="date-tag lts-date-tag">LTS: 2026/06/24</span></td>
+          <td class="ac-col">—</td>
         </tr>
         <tr class="table-warning-light">
           <td class="bulletin-col"><a href="https://www.ibm.com/support/pages/node/7277719" target="_blank" rel="noopener" class="bulletin-link">IBM MQ Console is affected by an exposure of sensitive information (CVE-2026-40895)</a></td>
@@ -788,9 +789,9 @@
           <td class="text-center"><span class="badge rounded-pill px-3 py-2 fs-badge" style="background-color:#fd7e14;">High</span></td>
           <td class="text-nowrap">2026-06-24</td>
           <td class="text-center"><span class="cvss-badge cvss-high">7.5</span></td>
-          <td class="fix-col"><span class="text-muted">—</span></td>
           <td class="fix-col"><span class="version-tag lts-tag">LTS: 9.2.0.43</span><br><span class="version-tag lts-tag">LTS: 9.3.0.41</span><br><span class="version-tag lts-tag">LTS: 9.4.0.25</span><br><span class="version-tag cd-tag">CD: MQ 10</span></td>
           <td class="text-center"><span class="date-tag lts-date-tag">LTS: 2026/06/24</span><br><span class="date-tag lts-date-tag">LTS: 2026/06/24</span><br><span class="date-tag lts-date-tag">LTS: 2026/06/24</span></td>
+          <td class="ac-col">REST API and Console</td>
         </tr>
         </tbody>
       </table>
@@ -799,7 +800,7 @@
 
   <!-- Footer -->
   <div class="report-footer">
-    Generated by IBM MQ CVE Scraper &nbsp;|&nbsp; 2026-09-15 00:49:09
+    Generated by IBM MQ CVE Scraper &nbsp;|&nbsp; 2026-09-15 16:30:32
   </div>
 
 </div><!-- /page-wrapper -->
@@ -834,7 +835,7 @@
       },
       columnDefs: [
         { orderable: false, targets: [0, 2, 6, 7, 8] },  // 不可排序的欄位
-        { className: 'text-center', targets: [1, 2, 3, 4, 5, 6, 7, 8] }
+        { className: 'text-center', targets: [1, 2, 3, 4, 5, 6, 7] }
       ],
       responsive: true
     });
