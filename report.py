@@ -557,7 +557,7 @@ def generate_html(
         }}
       }},
       columnDefs: [
-        {{ orderable: false, targets: [0, 2, 6, 7, 8] }},  // 不可排序的欄位
+        {{ orderable: false, targets: [0, 2, 6, 7] }},  // 不可排序的欄位
         {{ className: 'text-center', targets: [1, 2, 3, 4, 5, 6, 7] }}
       ],
       responsive: true
