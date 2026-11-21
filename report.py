@@ -541,7 +541,7 @@ def generate_html(
   $(document).ready(function () {{
     $('#cveTable').DataTable({{
       pageLength: 25,
-      lengthMenu: [10, 25, 50, 100],
+      lengthMenu: [5, 10, 25, 50, 100],
       order: [[5, 'desc']],  // 預設依 CVSS Score 降冪排序
       language: {{
         search: '搜尋：',
